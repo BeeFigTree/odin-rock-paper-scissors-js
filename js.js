@@ -41,7 +41,7 @@ let playerWins = 0
 let ties = 0
 
 //Plays up to 5 rounds by calling playRound()
-for (var i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
     let computerSelection = computerPlay()
     let playerSelection = prompt("Rock, paper or scissors?: ").toLowerCase()
 

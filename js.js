@@ -31,7 +31,7 @@ function determineWinner() {
     } else {
         alert(`You won the match with ${playerWins} wins to the computers ${computerWins} with ${ties} tie(s)!`)
     }
-    
+
     alert("Please reload the page to play again.")
 }
 
@@ -41,14 +41,14 @@ let playerWins = 0
 let ties = 0
 
 //Plays up to 5 rounds by calling playRound()
-for (let i = 1; i <= 5; i++) {
+for (var i = 1; i <= 5; i++) {
     let computerSelection = computerPlay()
     let playerSelection = prompt("Rock, paper or scissors?: ").toLowerCase()
 
-    //Check for valid move; if invalid the player forfeits the match because I'm too lazy to add logic to re-do the round
-    if(playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== 'scissors') {
-        alert("Please choose rock, paper or scissors; You are disqualified from the match. Please reload the page to play again.")
-        break
+    //Check for player valid move; if invalid re-prompts player
+    while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== 'scissors') {
+        alert("Please choose rock, paper or scissors.")
+        playerSelection = prompt("Rock, paper or scissors?").toLowerCase()
     }
 
     playRound(computerSelection, playerSelection)

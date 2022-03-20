@@ -27,7 +27,7 @@ function determineWinner() {
     } else if (ties === 5) {
         alert("Surprisingly, the match ended with 5 ties! No winner.")
     } else if (computerWins === playerWins) {
-        alert(`You tied the match with ${playerWins} and ${computerWins} computer wins with ${ties}!`)
+        alert(`You tied the match with ${playerWins} wins and ${computerWins} computer wins with ${ties}!`)
     } 
     else {
         alert(`You won the match with ${playerWins} wins to the computers ${computerWins} with ${ties} tie(s)!`)

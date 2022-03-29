@@ -1,7 +1,7 @@
 //Index 0 = choice and index 1 = choice loses to
 let choices = [["rock", "paper"], ["paper", "scissors"], ["scissors", "rock"]]
 
-//Computer choses its move
+//Computer chooses its move
 function computerPlay() {
     return choices[Math.floor(Math.random() * (2 - 1 + 1)) + 1]
 }
